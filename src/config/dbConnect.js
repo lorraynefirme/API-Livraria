@@ -1,6 +1,11 @@
 import mongoose from "mongoose";
+import * as dotenv from "dotenv";
 
-mongoose.connect("mongodb+srv://livrarianode:123@livraria.lpojulu.mongodb.net/");
+dotenv.config()
+
+const connection = `mongodb+srv://${process.env.USERNAMEDB}:${process.env.PASSWORDDB}@livraria.lpojulu.mongodb.net/`
+
+mongoose.connect(connection);
 
 let db = mongoose.connection;
 
