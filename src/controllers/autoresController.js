@@ -33,8 +33,7 @@ class AutorController {
         )
     }
 
-    static atualizarAutor = (req, res) => {
-       
+    static atualizarAutor = (req, res) => {   
         const id = req.params.id;
 
         autores.findByIdAndUpdate(id, req.body)
@@ -46,8 +45,7 @@ class AutorController {
         })
     }
 
-    static excluirAutor = (req, res) => {
-       
+    static excluirAutor = (req, res) => {    
         const id = req.params.id;
 
         autores.findByIdAndDelete(id)
